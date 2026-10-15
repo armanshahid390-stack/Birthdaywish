@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#100d2b" />
+  <title>For Dumbooo 💗</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-glow glow-one"></div>
+  <div class="sky-glow glow-two"></div>
+  <div id="sparkles" aria-hidden="true"></div>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <span>✦ a little universe for you ✦</span>
+    <button id="musicToggle" class="music-button" type="button" aria-pressed="false">♫ Music: OFF</button>
+  </header>
+
+  <main>
+    <section class="screen active" id="welcome">
+      <div class="moon">☾</div>
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+      <h1>Hey, <span class="pink">Dumbooo</span> ♡</h1>
+      <p class="intro">You may be miles away, but I'm sending a little pocket of happiness straight to your screen.</p>
+      <p class="script-line">Ready for your tiny surprise?</p>
+      <button class="primary" data-go="envelope">Open your gift <span>→</span></button>
+      <div class="tiny-note">made with a little code & lots of care ♡</div>
+    </section>
+
+    <section class="screen" id="envelope">
+      <p class="eyebrow">A LETTER, JUST FOR YOU</p>
+      <h2>Someone has a little something to say…</h2>
+      <button class="envelope-wrap" id="openLetter" aria-label="Open your birthday letter">
+        <span class="envelope">💌</span>
+        <span class="tap-hint">tap the envelope to open</span>
+      </button>
+      <div class="letter hidden" id="letter">
+        <h3>Happy Birthday, Dumbooo! ♡</h3>
+        <p>I hope today brings you the kind of happiness that stays with you long after the candles go out.</p>
+        <p>It's funny how someone you meet online can become someone you genuinely look forward to talking to. I'm really glad our paths crossed.</p>
+        <p>Thank you for the random chats, the silly moments, and simply being you. I hope this new year of your life is gentle with you and full of good surprises.</p>
+        <p class="signature">— your online friend, always cheering for you ✨</p>
+        <button class="primary" data-go="cake">There's more… →</button>
+      </div>
+      <button class="secondary back-button" data-go="welcome">← back</button>
+    </section>
+
+    <section class="screen" id="cake">
+      <p class="eyebrow">MAKE A WISH</p>
+      <h2>A cake just for you 🎂</h2>
+      <p class="muted">Tap the candles to make your wish come true-ish ✨</p>
+      <div class="cake-scene">
+        <div class="candles" id="candles">
+          <button class="candle lit" aria-label="Blow out candle 1"><i></i></button>
+          <button class="candle lit" aria-label="Blow out candle 2"><i></i></button>
+          <button class="candle lit" aria-label="Blow out candle 3"><i></i></button>
+          <button class="candle lit" aria-label="Blow out candle 4"><i></i></button>
+          <button class="candle lit" aria-label="Blow out candle 5"><i></i></button>
+        </div>
+        <div class="icing">♡ ♡ ♡</div>
+        <div class="cake-body"><span>Happy Birthday<br>Dumbooo!</span></div>
+        <div class="cake-plate"></div>
+      </div>
+      <p id="wishMessage" class="script-line">Make a wish, birthday girl!</p>
+      <button class="primary" data-go="heart">My wish for you →</button>
+    </section>
+
+    <section class="screen" id="heart">
+      <p class="eyebrow">A LITTLE REMINDER</p>
+      <h2>In case nobody's told you today…</h2>
+      <div class="heart-card">
+        <div class="big-heart">♡</div>
+        <p>You are enough.</p>
+        <p>You deserve good things.</p>
+        <p>You make a difference.</p>
+        <p>You can take life one step at a time.</p>
+        <p>And you deserve to feel loved and appreciated. ♡</p>
+      </div>
+      <button class="primary" data-go="reasons">One more thing… →</button>
+    </section>
+
+    <section class="screen" id="reasons">
+      <p class="eyebrow">YOUR LITTLE REMINDER BOARD</p>
+      <h2>Reasons you're pretty awesome ♡</h2>
+      <div class="reason-grid">
+        <article class="reason"><span>☻</span><p>Your chats can turn an ordinary day into a better one.</p></article>
+        <article class="reason"><span>✧</span><p>You deserve kindness, even on the days you don't feel your best.</p></article>
+        <article class="reason"><span>♡</span><p>Your dreams matter. Keep making room for them.</p></article>
+        <article class="reason"><span>☁</span><p>You don't have to be perfect to be wonderful.</p></article>
+        <article class="reason"><span>☾</span><p>Even from far away, a friendship can mean something.</p></article>
+        <article class="reason"><span>🎀</span><p>Never forget to give yourself the same kindness you give others.</p></article>
+      </div>
+      <button class="primary" data-go="extras">Choose a tiny gift →</button>
+    </section>
+
+    <section class="screen" id="extras">
+      <p class="eyebrow">PICK YOUR LITTLE EXTRA</p>
+      <h2>Choose one, Dumbooo 💗</h2>
+      <p class="muted">You can tap all of them. Birthday rules.</p>
+      <div class="gift-grid">
+        <button class="gift" data-gift="hug"><span>🫂</span><b>Virtual hug</b><small>for as long as you need</small></button>
+        <button class="gift" data-gift="poem"><span>🌷</span><b>A tiny poem</b><small>just for your birthday</small></button>
+        <button class="gift" data-gift="compliment"><span>💌</span><b>Secret note</b><small>open when you need a smile</small></button>
+        <button class="gift" data-gift="joke"><span>🤡</span><b>Birthday joke</b><small>it's probably terrible</small></button>
+      </div>
+      <div id="giftReveal" class="reveal hidden" aria-live="polite"></div>
+      <button class="primary" data-go="final">One final surprise →</button>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="moon">☾</div>
+      <p class="eyebrow">YOUR DAY, YOUR YEAR, YOUR UNIVERSE</p>
+      <h1>Happy Birthday,<br><span class="pink">Dumbooo!</span> ♡</h1>
+      <p class="final-message">May your days be softer, your laughs louder, your heart lighter, and your year full of moments that make you think, “I'm really glad I'm here.”</p>
+      <p class="script-line">Keep being you. That's already pretty special. ✨</p>
+      <div class="final-stars">✦ ｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</div>
+      <button class="primary" id="confettiButton">Send a sky full of wishes ✨</button>
+      <p class="tiny-note">P.S. This tiny corner of the internet is yours whenever you need a smile. ♡</p>
+      <button class="secondary" data-go="welcome">Replay the surprise ↻</button>
+    </section>
+  </main>
+
+  <footer>built with HTML, CSS, JavaScript & birthday feelings ♡</footer>
+  <audio id="birthdayMusic" loop preload="none">
+    <!-- Add a royalty-free MP3 named music.mp3 in this folder if you want music. -->
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
